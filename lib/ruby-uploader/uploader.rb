@@ -3,7 +3,7 @@ require 'uri'
 
 module Uploader
   class Upload
-    def initialize(url, path, headers = nil)
+    def initialize(url, path, headers = nil, &block)
       @url = url
       @headers  = headers
       @path     = path
@@ -14,6 +14,7 @@ module Uploader
         before_chunk: [],
         after_chunk:  []
       }
+      instance_eval(&block) if block_given?
     end
 
     def execute

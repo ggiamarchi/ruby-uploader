@@ -24,12 +24,20 @@ uploader = Uploader::Upload.new(URI('https://server/path/to/upload'), 'myfile.bi
 uploader.execute
 ```
 
+or with the more user friendly block syntax
+
+```ruby
+Uploader::Upload.new(URI('https://server/path/to/upload'), 'myfile.bin') do
+  execute
+end
+```
+
 Optionally, headers can be set using a Hash parameter
 
 ```ruby
-uploader = Uploader::Upload.new(URI('https://server/path/to/upload'), 'myfile.bin', { 'custom-header' => 'value' })
-
-uploader.execute
+Uploader::Upload.new(URI('https://server/path/to/upload'), 'myfile.bin', { 'custom-header' => 'value' }) do
+  execute
+end
 ```
 
 For more configuration capabilities, see the Handlers section
