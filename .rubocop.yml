@@ -6,3 +6,6 @@ Style/LineLength:
 
 Style/MethodLength:
   Max: 35
+
+Style/Encoding:
+  Enabled: false
