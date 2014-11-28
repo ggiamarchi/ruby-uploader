@@ -3,7 +3,6 @@ require 'uri'
 
 module Uploader
   class Upload
-
     def initialize(url, path, headers = nil)
       @url = url
       @headers  = headers
@@ -56,7 +55,6 @@ module Uploader
     end
 
     class Put < Net::HTTP::Put
-
       def initialize(path, headers, handlers)
         @handlers = handlers
         super path, headers
