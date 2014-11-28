@@ -116,3 +116,50 @@ end
 
 uploader.add_handler :after, AfterRequest.new
 ```
+
+## Putting all together
+
+An uploader with one handler of each kind that just do log.
+
+```ruby
+require 'ruby-uploader/uploader'
+require 'logger'
+
+class Handler
+  def initialize
+    @logger = Logger.new(STDOUT)
+  end
+end
+
+class BeforeRequest < Handler
+  def execute(request)
+    @logger.info('start processing request')
+  end
+end
+
+class AfterResponse < Handler
+  def execute(response)
+    @logger.info('finished processing request')
+  end
+end
+
+class BeforeChunk < Handler
+  def execute(buf, count, total_count, content_length)
+    puts "start processing chunk #{count} of #{total_count}"
+  end
+end
+
+class AfterChunk < Handler
+  def execute(buf, count, total_count, content_length)
+    puts "finished processing chunk #{count} of #{total_count}"
+  end
+end
+
+Uploader::Upload.new(URI('https://server/path/to/upload'), 'myfile.bin') do
+  add_handler :before, BeforeRequest.new
+  add_handler :after,  AfterResponse.new
+  add_handler :before_chunk, BeforeChunk.new
+  add_handler :after_chunk, AfterChunk.new
+  execute
+end
+```
