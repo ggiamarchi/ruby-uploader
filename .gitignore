@@ -2,3 +2,4 @@
 *.swp
 *.iml
 Gemfile.lock
+.bundle
