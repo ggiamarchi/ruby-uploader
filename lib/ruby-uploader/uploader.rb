@@ -88,8 +88,6 @@ module Uploader
             handler.execute buf, @count, @total_count, @content_length
           end
 
-          puts "#{@count} / #{@total_count}"
-
           @sock.write("#{buf.bytesize.to_s(16)}\r\n")
           rv = @sock.write(buf)
           @sock.write("\r\n")
