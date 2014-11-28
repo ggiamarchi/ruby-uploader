@@ -1,0 +1,8 @@
+require 'rubygems'
+require 'bundler/setup'
+require 'rubocop/rake_task'
+
+Bundler::GemHelper.install_tasks
+RuboCop::RakeTask.new
+
+task default: %w(rubocop)
