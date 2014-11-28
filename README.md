@@ -15,7 +15,7 @@ gem install ruby-uploader
 Below, the most basic example do not require any configuration
 
 ```ruby
-require_relative 'ruby-uploader/uploader'
+require 'ruby-uploader/uploader'
 
 uploader = Uploader::Upload.new(URI('https://server/path/to/upload'), 'myfile.bin')
 
