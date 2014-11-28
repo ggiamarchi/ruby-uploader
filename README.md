@@ -1,6 +1,7 @@
 # Ruby Uploader
 
 [![Build Status](https://api.travis-ci.org/ggiamarchi/ruby-uploader.png?branch=master)](https://travis-ci.org/ggiamarchi/ruby-uploader)
+[![Gem Version](https://badge.fury.io/rb/ruby-uploader.svg)](http://badge.fury.io/rb/ruby-uploader)
 
 This library provides a simple HTTP uploader based on chunks transfer. It supports handlers,
 useful to make custom request configuration and to read the progression of the file transfer.
