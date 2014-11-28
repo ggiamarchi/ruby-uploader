@@ -94,11 +94,11 @@ module Uploader
           rv = @sock.write(buf)
           @sock.write("\r\n")
 
-          @count += 1
-
           @handlers[:after_chunk].each do |handler|
             handler.execute buf, @count, @total_count, @content_length
           end
+
+          @count += 1
 
           rv
         end
