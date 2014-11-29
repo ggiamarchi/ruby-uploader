@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.authors       = ['Guillaume Giamarchi']
   gem.email         = ['guillaume.giamarchi@gmail.com']
   gem.licenses      = ['MIT']
-  gem.description   = 'Ruby HTTP chunked uploader with transfert progress'
-  gem.summary       = 'Ruby HTTP chunked uploader with transfert progress'
+  gem.description   = 'Ruby HTTP chunked uploader with transfer progress'
+  gem.summary       = 'Ruby HTTP chunked uploader with transfer progress'
   gem.homepage      = 'https://github.com/ggiamarchi/ruby-uploader'
   gem.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
   gem.require_paths = ['lib']
