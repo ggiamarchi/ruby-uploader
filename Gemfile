@@ -7,6 +7,10 @@ group :development do
   gem 'rake'
 end
 
+group :samples do
+  gem 'ruby-progressbar'
+end
+
 group :debug do
   gem 'byebug'
 end
