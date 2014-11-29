@@ -3,3 +3,4 @@
 *.iml
 Gemfile.lock
 .bundle
+pkg
