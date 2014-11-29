@@ -9,7 +9,7 @@
 url  = ARGV[0]
 path = ARGV[1]
 
-require 'ruby-uploader/uploader'
+require 'ruby-uploader'
 require 'logger'
 require 'ruby-progressbar'
 

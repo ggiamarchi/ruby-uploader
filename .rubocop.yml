@@ -1,3 +1,6 @@
+Style/FileName:
+  Enabled: false
+
 Style/Documentation:
   Enabled: false
 

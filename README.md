@@ -18,7 +18,7 @@ gem install ruby-uploader
 Below, the most basic example do not require any configuration
 
 ```ruby
-require 'ruby-uploader/uploader'
+require 'ruby-uploader'
 
 uploader = Uploader::Upload.new(URI('https://server/path/to/upload'), 'myfile.bin')
 
@@ -123,7 +123,7 @@ uploader.add_handler :after, AfterRequest.new
 An uploader with one handler of each kind that just do log.
 
 ```ruby
-require 'ruby-uploader/uploader'
+require 'ruby-uploader'
 require 'logger'
 
 class Handler
