@@ -1,1 +1,1 @@
-require 'ruby-uploader/uploader'
+require 'ruby-uploader/upload'
